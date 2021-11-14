@@ -1,1 +1,1 @@
-# swedish-olympiad-2022-public
+# swedish-olympiad-2022

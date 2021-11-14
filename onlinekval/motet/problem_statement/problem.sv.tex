@@ -1,0 +1,45 @@
+\problemname{Mötet}
+En styrelse med $N$ medlemmar planerar att ha ett möte.
+På grund av det stora antalet styrelseledamöter är det svårt att hitta en tid som passar alla, men man vill gärna att så många personer som möjligt kan vara med på mötet.
+
+Varje ledamot är tillgänglig under ett antal olika tidsintervall, där varje tidsintervall $[a, b]$ betyder att ledamöten kan närvara om \textbf{mötet startar vid någon tid} $t$ där $a \le t \le b$.
+Eftersom vissa ledamöter är väldigt slarviga med sina kalendrar kan en och samma ledamot råka ge dig olika tidsintervall som överlappar, t.ex $[1, 3]$ och $[2, 4]$, även om det haed räckt med ett enda intervall, i detta fall $[1, 4]$.
+
+Beräkna det största antalet ledamöter som kan delta på mötet.
+
+\section*{Indata}
+Den första raden innehåller ett heltal $N$ ($1 \le N \leq 2\cdot 10^5$), antalet ledamöter i styrelsen.
+
+Därefter följer $N$ rader, en för varje styrelseledamot.
+Den $i$:te raden börjar med antalet tidsintervall $m_i$ ($1 \leq m_i \leq 2\cdot 10^5$) som den $i$:te ledamöten kan närvara under.
+Detta följs av $m_i$ par av heltal, ett för varje intervall.
+Dessa par $a, b$ ($0 \le a \le b \le 10^9$) representerar intervallet $[a, b]$.
+
+Låt $B=\sum_{i=1}^{N} m_i$ vara summan av antalet tidsintervall som alla ledamöter är tillgängliga under.
+Då gäller det att $B \leq 2\cdot 10^5$.
+
+\section*{Utdata}
+Skriv ut en rad med ett heltal -- det största antalet ledamöter som kan delta i mötet om starttiden väljs optimalt.
+
+\section*{Poängsättning}
+Din lösning kommer att testas på en antal testfallsgrupper.
+För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  Grupp & Poängvärde & Gränser \\ \hline
+  $1$   & $10$       & $B \leq 100$ och $0 \leq a \leq b \leq 100$ \\ \hline
+  $2$   & $15$       & $B \leq  1\,000$, och $0 \leq a \leq b \leq 4\,000$, och ingen enskild ledamot har två tidsintervall som överlappar \\ \hline
+  $3$   & $30$       & Ingen enskild ledamot har två tidsintervall som överlappar \\ \hline
+  $4$   & $15$       & $B \leq 1\,000$ och $0 \leq a \leq b \leq 4\,000$ \\ \hline
+  $5$   & $30$       & Inga ytterligare begränsningar \\ \hline
+\end{tabular}
+
+Notera att vissa exempelfall är inte giltiga i alla testfallsgrupper.
+
+\section*{Förklaring av exempelfall}
+I det första exemplet kan vi välja att starta mötet vid tiden $4$, då ledamot $2$ och $3$ kan delta.
+Fallet skulle kunna vara med i samtliga testfallsgrupper.
+
+Exempel $2$ och $3$ skulle inte kunna förekomma i testfallsgrupp $2$ eller $3$.

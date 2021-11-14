@@ -1,0 +1,8 @@
+author: Johan Sannemo
+source: Programmeringsolympiadens skolkval 2022
+rights_owner: Programmeringsolympiaden
+license: cc by-sa
+type: scoring
+grading:
+    show_test_data_groups: yes
+validator_flags: float_absolute_tolerance 5e-7
